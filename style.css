@@ -1,0 +1,209 @@
+/* fonts link */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+/* color & fonts variable */
+
+:root {
+  --Very-darkblue: hsl(233, 47%, 7%);
+  --Dark-desaturated-blue: hsl(244, 38%, 16%);
+  --Soft-violet: hsl(277, 64%, 61%);
+  --White: hsl(0, 0%, 100%);
+  --Slightly-transparent-white: hsla(0, 0%, 100%, 0.75);
+  --Slightly-transparent-white1: hsla(0, 0%, 100%, 0.6);
+  --Inter:'Inter', sans-serif;
+  --Lexend-Deca:'Lexend Deca', sans-serif;
+}
+
+
+/* default css of frontend mentor */
+
+.attribution {
+  font-size: 1rem;
+  text-align: center;
+  color: white;
+  font-family: var(--Lexend-Deca);
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  text-decoration: none;
+  color: var(--Soft-violet);
+  
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Very-darkblue);
+  height: 100vh;
+}
+
+h1{
+  color: var(--Soft-violet);
+  font-family: var(--Lexend-Deca);
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom :5rem ;
+}
+
+.card-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Dark-desaturated-blue);
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+.card-container .card-img{
+  min-width: 400px;
+  min-height: 300px;
+  background-image: url(./images/image-header-desktop.jpg);
+  background-size: cover;
+  border-radius:0 5px 5px 0 ;
+  filter: var(--Very-darkblue);
+  position: relative;
+}
+
+.card-container .card-img::after{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  background-color: var(--Soft-violet);
+  z-index: 1;
+  border-radius:0 5px 5px 0 ;
+  opacity: 0.7;
+  filter: brightness(0.5);
+  
+
+}
+
+
+
+
+.card-container .card-content{
+  max-width: 400px;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 1rem;
+  padding:0 3rem ;
+}
+
+.card-container .card-content h2{
+  font-family: var(--Inter);
+  color: var(--White);
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.card-container .card-content h2 span{ 
+  font-family: var(--Inter);
+  color: var(--Soft-violet);
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.card-container .card-content p{
+  font-family: var(--Inter);
+  color: var(--Slightly-transparent-white);
+  font-weight: 400;
+  font-size: 0.9rem;
+  line-height: 1.2rem;
+}
+
+.card-container .card-content .stats-container{
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  
+}
+
+.card-container .card-content .stats-container .stats-container-col .stats-content-heading {
+  font-family: var(--Lexend-Deca);
+  color: var(--White);
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
+  letter-spacing: 2px;
+}
+
+.card-container .card-content .stats-container .stats-container-col .stats-content-sub-heading {
+  font-family: var(--Inter);
+  color: var(--Slightly-transparent-white);
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 0.9rem;}
+
+@media screen and (max-width:455px) {
+
+
+
+
+  .card-container{
+    flex-direction: column-reverse;
+    border-radius: 0px 0px 5px 5px;
+  }
+
+  .card-container .card-img{
+    max-width: 325px ;
+    min-height: 250px;
+    border-radius:5px 5px 0 0  ;
+   
+  }
+
+  .card-container .card-content{
+    max-width: 325px;
+    min-height: 250px;
+    padding: 0 2.5rem;
+    justify-content: center;
+   
+  }
+
+  .card-container .card-content h2{
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .card-container .card-content p{
+    text-align: center;
+    font-size: 0.9rem;
+  }
+
+  .card-container .card-content .stats-container{
+    flex-direction: column;
+
+   
+    
+  }
+
+  .card-container .card-content .stats-container .stats-container-col .stats-content-heading{
+    text-align: center  ;
+  }
+
+  h1{
+  
+    font-size: 2rem ;
+  }
+
+  .attribution {
+    font-size: 0.75rem;
+  }
+  
+}
